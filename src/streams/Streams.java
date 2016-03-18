@@ -1,6 +1,7 @@
 package streams;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,6 +10,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * https://www.javacodegeeks.com/2014/05/java-8-features-tutorial.html
@@ -22,7 +24,7 @@ import java.util.stream.Collectors;
  * start off with simple class called Task.
  * 
  */
-public class Stream {
+public class Streams {
 	private enum Status {
 		OPEN, CLOSED
 	};
@@ -137,10 +139,13 @@ public class Stream {
 		 * file line by line is a very good candidate to benefit from stream
 		 * processing. Here is a small example to confirm that.
 		 */
-		final Path path = new File(filename).toPath();
+		final Path path = new File("test.txt").toPath();
 		try (Stream<String> lines = Files.lines(path, StandardCharsets.UTF_8)) {
 			lines.onClose(() -> System.out.println("Done!")).forEach(System.out::println);
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+
 		/**
 		 * The onClose method called on the stream returns an equivalent stream
 		 * with an additional close handler. Close handlers are run when the
