@@ -1,6 +1,7 @@
-package simpleguice;
+package guiceexample;
 
 import java.io.IOException;
+import us.monoid.web.Resty;
 
 public class GuicedRandomStringGetter {
 

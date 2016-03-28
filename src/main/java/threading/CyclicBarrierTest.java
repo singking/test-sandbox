@@ -2,19 +2,14 @@ package threading;
 
 import java.util.concurrent.CyclicBarrier;
 
-public class CyclicBarrierTest implements Runnable{
+public class CyclicBarrierTest implements Runnable {
 
 	private CyclicBarrier barrier;
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+	public static void main(String[] args) {
 	}
 
 	@Override
 	public void run() {
-
-		
 	}
-
 }

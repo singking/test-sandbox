@@ -1,0 +1,77 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.king:examples:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework:spring-core:jar -> version ${org.springframework.version} vs ${spring.version} @ line 133, column 15
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework:spring-context:jar -> version ${org.springframework.version} vs ${spring.version} @ line 138, column 15
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: junit:junit:jar -> version 4.12 vs 4.4 @ line 144, column 15
+[WARNING] 'build.plugins.plugin.(groupId:artifactId)' must be unique but found duplicate declaration of plugin org.apache.maven.plugins:maven-compiler-plugin @ line 179, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 179, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building examples 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ examples ---
+[INFO] Deleting /Users/kingt/workspaces/test/test-sandbox/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ examples ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ examples ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 115 source files to /Users/kingt/workspaces/test/test-sandbox/target/classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /Users/kingt/workspaces/test/test-sandbox/src/main/java/springutil/Main1.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/kingt/workspaces/test/test-sandbox/src/main/java/springutil/Main1.java: Recompile with -Xlint:unchecked for details.
+[INFO] 2 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/jmock/example2/PortfolioTest.java:[13,32] package com.veerasundar.easymock does not exist
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/jmock/example2/PortfolioTest.java:[14,32] package com.veerasundar.easymock does not exist
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/jmock/example2/PortfolioTest.java:[15,32] package com.veerasundar.easymock does not exist
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/jaxws/soap/GreetingImplService.java:[22,67] package soap does not exist
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/jaxws/soap/GreetingImplService.java:[28,39] package soap does not exist
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/Turtle.java:[6,29] cannot find symbol
+  symbol:   class Grid
+  location: class Turtle
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/MainClass.java:[23,17] cannot find symbol
+  symbol:   class WorkQueue
+  location: class MainClass
+[INFO] 7 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.832 s
+[INFO] Finished at: 2016-03-28T01:59:11+01:00
+[INFO] Final Memory: 16M/176M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project examples: Compilation failure: Compilation failure:
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/jmock/example2/PortfolioTest.java:[13,32] package com.veerasundar.easymock does not exist
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/jmock/example2/PortfolioTest.java:[14,32] package com.veerasundar.easymock does not exist
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/jmock/example2/PortfolioTest.java:[15,32] package com.veerasundar.easymock does not exist
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/jaxws/soap/GreetingImplService.java:[22,67] package soap does not exist
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/jaxws/soap/GreetingImplService.java:[28,39] package soap does not exist
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/Turtle.java:[6,29] cannot find symbol
+[ERROR] symbol:   class Grid
+[ERROR] location: class Turtle
+[ERROR] /Users/kingt/workspaces/test/test-sandbox/src/main/java/MainClass.java:[23,17] cannot find symbol
+[ERROR] symbol:   class WorkQueue
+[ERROR] location: class MainClass
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,6 +1,7 @@
-package simpleguice;
+package guiceexample;
 
 import javax.inject.Inject;
+//import jdk.nashorn.tools.Shell;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;

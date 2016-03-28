@@ -41,17 +41,17 @@ public class Solver {
 	}
 
 	public Solver(float[][] matrix) {
-	     data = matrix;
-	     N = matrix.length;
-	     barrier = new CyclicBarrier(N,
-	                                 new Runnable() {
-	                                   public void run() {
-	                                     mergeRows(...);
-	                                   }
-	                                 });
-	     for (int i = 0; i < N; ++i)
-	       new Thread(new Worker(i)).start();
-
-	     waitUntilDone();
-	   }
+		 data = matrix;
+		 N = matrix.length;
+		 barrier = new CyclicBarrier(N,
+		 new Runnable() {
+		 public void run() {
+		// mergeRows(...);
+		 }
+		 });
+		 for (int i = 0; i < N; ++i)
+		 new Thread(new Worker(i)).start();
+		
+		// waitUntilDone();
+	}
 }

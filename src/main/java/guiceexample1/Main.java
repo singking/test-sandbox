@@ -1,4 +1,4 @@
-package gettingstarted;
+package guiceexample1;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -16,8 +16,7 @@ public class Main {
 		/*
 		 * Now that we've got the injector, we can build objects.
 		 */
-		RealBillingService billingService = injector
-				.getInstance(RealBillingService.class);
+		RealBillingService billingService = injector.getInstance(RealBillingService.class);
 		billingService.chargeOrder(new Supreme(), new MasterCard());
 	}
 }

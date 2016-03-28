@@ -1,11 +1,8 @@
-package gettingstarted;
+package guiceexample1;
 
 import java.math.BigDecimal;
 
 public class PaypalCreditCardProcessor implements CreditCardProcessor {
-
-	PaypalCreditCardProcessor() {
-	}
 
 	PaypalCreditCardProcessor() {
 	}

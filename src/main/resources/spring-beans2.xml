@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/util 
+           http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+	<bean id="env-vars" class="springutil.EnvironmentVariables" />
+
+	<util:map id="emails" map-class="springutil.EnvironmentVariables"
+		key-type="java.lang.String" value-type="java.lang.String">
+		<entry key="pechorin" value="pechorin@hero.org" />
+		<entry key="raskolnikov" value="raskolnikov@slums.org" />
+		<entry key="stavrogin" value="stavrogin@gov.org" />
+		<entry key="porfiry" value="porfiry@gov.org" />
+	</util:map>
+
+	<bean id="server" class="springutil.Servers">
+		<property name="popServer" value="${pop_server}" />
+		<property name="smtpServer" value="${smtp_server}" />
+	</bean>
+
+	<bean id="propertyPlaceholderConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:mail-${environment}.properties</value>
+			</list>
+		</property>
+	</bean>
+</beans>

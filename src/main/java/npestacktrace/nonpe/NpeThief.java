@@ -9,12 +9,12 @@ package npestacktrace.nonpe;
  * optimization of the JVM for this use case. If this flag is set, the
  * stacktrace will be available. (editor: or if the -Xint is set).
  * 
- * “The compiler in the server VM now provides correct stack backtraces for all
- * “cold” built-in exceptions. For performance purposes, when such an exception
- * is thrown a few times, the method may be recompiled. After recompilation, the
+ * The compiler in the server VM now provides correct stack backtraces for all
+ * cold built-in exceptions. For performance purposes, when such an exception is
+ * thrown a few times, the method may be recompiled. After recompilation, the
  * compiler may choose a faster tactic using preallocated exceptions that do not
  * provide a stack trace. To disable completely the use of preallocated
- * exceptions, use this new flag: -XX:-OmitStackTraceInFastThrow.”
+ * exceptions, use this new flag: -XX:-OmitStackTraceInFastThrow.ï¿½
  * 
  * @author tyrone
  *

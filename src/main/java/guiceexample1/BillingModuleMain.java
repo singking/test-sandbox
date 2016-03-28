@@ -1,4 +1,4 @@
-package gettingstarted;
+package guiceexample1;
 
 /**
  * https://code.google.com/p/google-guice/wiki/GettingStarted

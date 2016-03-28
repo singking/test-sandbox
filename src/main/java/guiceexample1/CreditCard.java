@@ -1,4 +1,4 @@
-package gettingstarted;
+package guiceexample1;
 
 public abstract class CreditCard {
 

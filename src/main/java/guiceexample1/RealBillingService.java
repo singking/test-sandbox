@@ -1,4 +1,4 @@
-package gettingstarted;
+package guiceexample1;
 
 import com.google.inject.Inject;
 

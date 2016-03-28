@@ -37,7 +37,8 @@ public class Main {
 		System.out.println("trying again 2..");
 		try {
 			new Main().throwExceptionLevel1();
-		} catch (ExceptionLevel2 e) {
+		//} catch (ExceptionLevel2 e) {
+		} catch (ExceptionLevel1 e) {
 			System.out.println("caught the Exception exception");
 			e.printStackTrace();
 		}

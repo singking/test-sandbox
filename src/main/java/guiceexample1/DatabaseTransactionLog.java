@@ -1,4 +1,4 @@
-package gettingstarted;
+package guiceexample1;
 
 public class DatabaseTransactionLog implements TransactionLog {
 
