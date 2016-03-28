@@ -11,7 +11,7 @@ public class MainWebContainerTestRunner {
 		System.out.println("Jetty starting...");
 
 		WebAppContext root = new WebAppContext();
-		root.setContextPath("/abp");
+		root.setContextPath("/palindrome");
 		root.setResourceBase("src/main/webapp/");
 		root.setDescriptor(root.getResourceBase() + "/WEB-INF/web.xml");
 		root.setParentLoaderPriority(true);
