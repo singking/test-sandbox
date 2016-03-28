@@ -1,1 +1,10 @@
-/bin/
+bin/
+target
+.project
+.classpath
+.settings
+.settings/org.eclipse.jdt.core.prefs
+.DS_Store
+err.log
+src/main/.DS_Store
+src/main/java/.DS_Store
