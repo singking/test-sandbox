@@ -14,14 +14,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Palindrome title</title>
+<title>Palindrome</title>
 </head>
 <body>
 <CENTER>
 <H1>Palindrome Words &amp; Phrases</H1>
 </CENTER>
+<p>
+A palindrome is a word, phrase, number, or other sequence of characters which reads the 
+same backward or forward. Allowances may be made for adjustments to capital letters, 
+punctuation, and word dividers.
+</p>
+<p>
+Famous examples include "A man, a plan, a canal, Panama!", "Amor, Roma", "race car", "stack cats", 
+"step on no pets", "taco cat", "put it up", "Was it a car or a cat I saw?" and "No 'x' in Nixon".
+</p>
 
-<FORM ACTION="http://localhost:8080/Playfish_Palindrome/PalindromeServlet">
+	
+<FORM ACTION="http://localhost:8081/palindrome/PalindromeServlet">
 Palindrome: 
 <INPUT TYPE="TEXT" NAME="palindrome" VALUE="">
 <BR>
@@ -33,7 +43,6 @@ User:
 
 
 <%
-
 List <ScoreSheet> scoresheet = (List<ScoreSheet>) application.getAttribute("scores");
 if(scoresheet!=null){
 	for(ScoreSheet s: scoresheet ){
@@ -44,7 +53,6 @@ if(scoresheet!=null){
 			s.getScore()+"<br>");
 	}
 }
-
 %>
 </body>
 </html>

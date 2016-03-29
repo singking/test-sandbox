@@ -6,8 +6,6 @@ import org.eclipse.jetty.webapp.WebAppContext;
 public class MainWebContainerTestRunner {
 
 	public static void main(String[] args) throws Exception{
-		// TODO Auto-generated method stub
-
 		System.out.println("Jetty starting...");
 
 		WebAppContext root = new WebAppContext();

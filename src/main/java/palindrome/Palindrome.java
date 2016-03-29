@@ -14,7 +14,6 @@ public class Palindrome {
 	 * @return
 	 */
 	int scorePalindrome(String palindromeString){
-		int score =0;
 		
 		String nw = normalise(palindromeString);
 		
@@ -22,11 +21,11 @@ public class Palindrome {
 	
 		String reversed = sb.reverse().toString();
 		
-		if (checkPalindrome(palindromeString, reversed)){
-			score = palindromeString.length()/2;
+		if (!checkPalindrome(nw, reversed)){
+			return 0;
 		}
 		
-		return score;
+		return palindromeString.length()/2;
 	}
 	
 	/**
@@ -36,11 +35,9 @@ public class Palindrome {
 	 * @return
 	 */
 	String normalise(String p){
-	
-	
+
 		StringBuilder sb=new StringBuilder();
 		for (int i=0; i<p.length(); i++){
-			
 			if (Character.isLetterOrDigit(p.charAt(i))){
 				sb.append(Character.toLowerCase(p.charAt(i)));
 			}
@@ -56,14 +53,13 @@ public class Palindrome {
 	 * @return
 	 */
 	boolean checkPalindrome(String original, String reversedString){
-		
 		if (original.length()!=reversedString.length()){
 			return false;
 		}
 		
 		for (int i=0; i<original.length(); i++){
-			
-			if (original.charAt(i) != reversedString.charAt(original.length() -1 - i)){
+//			if (original.charAt(i) != reversedString.charAt(original.length() -1 - i)){
+			if (original.charAt(i) != reversedString.charAt(i)){
 				return false;
 			}
 		}
