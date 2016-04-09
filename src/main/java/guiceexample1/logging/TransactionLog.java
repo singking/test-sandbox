@@ -1,4 +1,4 @@
-package guiceexample1;
+package guiceexample1.logging;
 
 public interface TransactionLog {
 	void info(String message);

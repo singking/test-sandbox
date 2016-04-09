@@ -5,6 +5,11 @@ package guiceexample1;
  */
 import com.google.inject.AbstractModule;
 
+import guiceexample1.carprocessor.CreditCardProcessor;
+import guiceexample1.carprocessor.PaypalCreditCardProcessor;
+import guiceexample1.logging.DatabaseTransactionLog;
+import guiceexample1.logging.TransactionLog;
+
 public class BillingModuleMain extends AbstractModule {
 	@Override
 	protected void configure() {

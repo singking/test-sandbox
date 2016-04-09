@@ -2,6 +2,11 @@ package guiceexample1;
 
 import com.google.inject.Inject;
 
+import guiceexample1.carprocessor.CreditCardProcessor;
+import guiceexample1.creditcards.CreditCard;
+import guiceexample1.logging.TransactionLog;
+import guiceexample1.pizzas.PizzaOrder;
+
 public class RealBillingService implements BillingService {
 	private final CreditCardProcessor processor;
 	private final TransactionLog transactionLog;
@@ -33,5 +38,4 @@ public class RealBillingService implements BillingService {
 
 		return receipt;
 	}
-
 }

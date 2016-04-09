@@ -14,7 +14,5 @@ public class AppInjector extends AbstractModule {
 
 		// bind MessageService to Facebook Message implementation
 		// bind(MessageService.class).to(FacebookService.class);
-
 	}
-
 }

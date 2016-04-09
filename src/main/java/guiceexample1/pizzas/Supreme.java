@@ -1,11 +1,11 @@
-package guiceexample1;
+package guiceexample1.pizzas;
 
 import java.math.BigDecimal;
 
 public class Supreme extends PizzaOrder {
 
 	@Override
-	BigDecimal price() {
+	public BigDecimal price() {
 		return BigDecimal.valueOf(9.99);
 	}
 
@@ -13,5 +13,4 @@ public class Supreme extends PizzaOrder {
 	public String toString() {
 		return "Supreme [beef, peperoni, green peppers]";
 	}
-
 }

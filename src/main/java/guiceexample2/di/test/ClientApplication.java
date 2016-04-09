@@ -15,5 +15,4 @@ public class ClientApplication {
 
 		app.sendMessage("Hi Pankaj", "pankaj@abc.com");
 	}
-
 }

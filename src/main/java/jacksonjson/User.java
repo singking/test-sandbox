@@ -3,9 +3,8 @@ package jacksonjson;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
-//import org.codehaus.jackson.JsonParseException;
-import com.fasterxml.jackson.core.JsonParseException;
 
 /**
  * 
@@ -86,7 +85,6 @@ public class User {
 	}
 
 	public static void main(String[] args) throws Exception, IOException {
-//		public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
 
 		// It takes two lines of Java to turn it into a User instance:
 		ObjectMapper mapper = new ObjectMapper(); // can reuse, share globally

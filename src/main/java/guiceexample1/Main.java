@@ -3,6 +3,9 @@ package guiceexample1;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
+import guiceexample1.creditcards.MasterCard;
+import guiceexample1.pizzas.Supreme;
+
 public class Main {
 
 	public static void main(String[] args) {

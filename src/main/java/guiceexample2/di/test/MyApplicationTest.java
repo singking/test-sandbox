@@ -37,5 +37,4 @@ public class MyApplicationTest {
 		MyApplication appTest = injector.getInstance(MyApplication.class);
 		Assert.assertEquals(true, appTest.sendMessage("Hi Pankaj", "pankaj@abc.com"));
 	}
-
 }

@@ -30,7 +30,5 @@ public class RawDataBindin {
 
 		// Map<String,User> result = mapper.readValue(src, new
 		// TypeReference<Map<String,User>>() { });
-
 	}
-
 }

@@ -1,8 +1,7 @@
-package guiceexample1;
+package guiceexample1.pizzas;
 
 import java.math.BigDecimal;
 
 public abstract class PizzaOrder {
-
-	abstract BigDecimal price();
+	public abstract BigDecimal price();
 }

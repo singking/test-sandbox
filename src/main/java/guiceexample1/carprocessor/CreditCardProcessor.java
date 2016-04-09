@@ -1,4 +1,4 @@
-package guiceexample1;
+package guiceexample1.carprocessor;
 
 import java.math.BigDecimal;
 
