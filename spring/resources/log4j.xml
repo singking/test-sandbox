@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<appender name="Console" class="org.apache.log4j.ConsoleAppender">
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d [%t] [%X{RequestUIDMDC} %X{UsernameMDC}] %-5p %c - %m%n" />
+		</layout>
+	</appender>
+
+
+	<appender name="File" class="org.apache.log4j.rolling.RollingFileAppender">
+		<param name="Threshold" value="INFO" />
+		<param name="Append" value="false" />
+		<rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+			<param name="FileNamePattern"
+				value="/Users/kingt/Documents/innovate/abp-48705-poc/feed.%d{yyyy-MM-dd}" />
+		</rollingPolicy>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c [[%x]] [%t] %C{2} (%F:%M:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<root>
+		<appender-ref ref="File" />
+	</root>
+</log4j:configuration>
