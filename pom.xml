@@ -4,7 +4,7 @@
     <groupId>com.singking</groupId>
     <artifactId>sandbox</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-     <packaging>pom</packaging>
+    <packaging>pom</packaging>
     <name>odds and sods</name>
 
     <properties>
@@ -26,6 +26,14 @@
         <module>banking</module>
         <module>lambdas</module>
     </modules>
+
+
+    <repositories>
+        <repository>
+            <id>First thirdparty repository</id>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>

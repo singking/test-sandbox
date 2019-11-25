@@ -13,7 +13,7 @@ public class OptionalExample {
 
 		System.out.println();
 		System.out.println();
-		
+
 		Optional<String> firstName = Optional.of("Tom");
 		System.out.println("First Name is set? " + firstName.isPresent());
 		System.out.println("First Name: " + firstName.orElseGet(() -> "[none]"));

@@ -5,8 +5,10 @@ import java.util.List;
 
 public class IterationCollection {
 	public static void main(String[] args) {
-		List<Person> persons = Arrays.asList(new Person("Joe", "Grind", 78, Person.Sex.MALE),
-				new Person("Jemala", "Bob", 22, Person.Sex.MALE), new Person("Janet", "Peach", 10, Person.Sex.FEMALE),
+		List<Person> persons = Arrays.asList(
+				new Person("Joe", "Grind", 78, Person.Sex.MALE),
+				new Person("Jemala", "Bob", 22, Person.Sex.MALE), 
+				new Person("Janet", "Peach", 10, Person.Sex.FEMALE),
 				new Person("Peter", "smith", 9, Person.Sex.MALE));
 
 		persons.stream().forEach(e -> e.setLastName("Doe"));
@@ -27,9 +29,11 @@ public class IterationCollection {
 		 * Consequently, the mapToInt operation in this example returns a stream
 		 * that contains the ages of all male members in the collection roster.
 		 */
-		String startsWithCreteria = "J";
-		double average = persons.stream().filter(p -> p.name.startsWith(startsWithCreteria)).mapToInt(Person::getAge)
-				.average().getAsDouble();
+		double average = persons.stream()
+				.filter(p -> p.name.startsWith("J"))
+				.mapToInt(Person::getAge)
+				.average()
+				.getAsDouble();
 
 		System.out.println("average age " + average);
 	}
