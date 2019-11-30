@@ -1,4 +1,4 @@
-package banking.test4;
+package com.singking.test4;
 
 import java.util.ArrayList;
 import java.util.Arrays;

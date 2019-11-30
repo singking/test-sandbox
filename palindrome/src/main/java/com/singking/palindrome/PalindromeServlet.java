@@ -34,7 +34,7 @@ public class PalindromeServlet extends HttpServlet {
         // Use "request" to read incoming HTTP headers
 
         // (e.g., cookies) and query data from HTML forms.
-        String ps = request.getParameter("src/main/java/palindrome");
+        String ps = request.getParameter("src/main/java/com/singking/palindrome");
 
         String user = CookieUtilities.getCookieValue(request, "user", null);
         if (user != null) {

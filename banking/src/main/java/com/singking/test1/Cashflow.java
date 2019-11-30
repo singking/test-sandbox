@@ -1,4 +1,4 @@
-package banking.test1;
+package com.singking.test1;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -63,5 +63,4 @@ public class Cashflow {
 		hash = hash * 41 + (endDate == null ? 0 : endDate.hashCode());
 		return hash;
 	}
-
 }

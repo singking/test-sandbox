@@ -1,4 +1,4 @@
-package banking.test2;
+package com.singking.test2;
 
 public class Mathematics {
 
@@ -27,6 +27,5 @@ public class Mathematics {
 		for (int i = 0; i <= 13; i++) {
 			System.out.println("Factorial of " + i + "=" + Mathematics.factorial(i));
 		}
-
 	}
 }
