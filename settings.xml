@@ -1,0 +1,33 @@
+<settings>
+
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+
+	<profiles>
+		<profile>
+			<id>mymy</id>
+			<repositories>
+				<repository>
+            <id>First thirdparty repository</id>
+                        <url>https://repo1.maven.org/maven2/</url>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+          <id>First thirdparty repository</id>
+                                  <url>https://repo1.maven.org/maven2/</url>
+
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+
+
+	</profiles>
+
+
+	<activeProfiles>
+		<activeProfile>mymy</activeProfile>
+	</activeProfiles>
+
+</settings>
