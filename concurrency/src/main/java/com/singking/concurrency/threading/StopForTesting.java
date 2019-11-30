@@ -22,7 +22,5 @@ public class StopForTesting {
 		acct.stop();
 
 		System.out.println("method stop ()");
-
 	}
-
 }

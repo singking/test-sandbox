@@ -4,78 +4,54 @@ import java.util.concurrent.TimeUnit;
 
 public class Account2 {
 
-	private volatile double amount;
+    private volatile double amount;
 
-	// stop interest payments
-	private volatile boolean terminate;
+    // stop interest payments
+    private volatile boolean terminate;
 
-	private Thread thread;
+    private Thread thread;
 
-	public Account2(double initialAmount) {
-		amount = initialAmount;
-	}
+    public Account2(double initialAmount) {
+        amount = initialAmount;
+    }
 
-	public double getAmount() {
-		return amount;
-	}
+    public double getAmount() {
+        return amount;
+    }
 
-	public void startPeriodicInterest() {
-		Interest interest = new Interest();
-		thread = new Thread(interest);
-		thread.start();
-	}
+    public void startPeriodicInterest() {
+        Interest interest = new Interest();
+        thread = new Thread(interest);
+        thread.start();
+    }
 
-	public void stop() {
-		this.terminate = true;
-		// thread.interrupt();
-	}
+    public void stop() {
+        this.terminate = true;
+        // thread.interrupt();
+    }
 
-	public synchronized void credit(double amountChange) {
-		amount = amount + amountChange;
-	}
+    public synchronized void credit(double amountChange) {
+        amount = amount + amountChange;
+    }
 
-	public synchronized void debit(double amountChange) {
-		amount = amount - amountChange;
-	}
+    public synchronized void debit(double amountChange) {
+        amount = amount - amountChange;
+    }
 
-	/**
-	 * Transfer amount from this account to destination account provided
-	 * 
-	 * @param destination
-	 *            account to be credited
-	 * 
-	 * @param amountChange
-	 *            amount to transfer
-	 */
-	public synchronized void transfer(Account2 destination, double amountChange) {
+    /**
+     * Transfer amount from this account to destination account provided
+     *
+     * @param destination  account to be credited
+     * @param amountChange amount to transfer
+     */
+    public synchronized void transfer(Account2 destination, double amountChange) {
+        debit(amountChange);
+        destination.credit(amountChange);
+    }
 
-		debit(amountChange);
-		destination.credit(amountChange);
-
-	}
-
-	/**
-	 * Adds interest to Account.amount until the thread is terminated by another
-	 * thread setting the Account.terminate flag to false in another thread
-	 *
-	 */
-	public class Interest implements Runnable {
-		public void run() {
-
-			System.out.println(Thread.currentThread().getName() + " terminate=" + terminate);
-			while (!terminate) {
-				amount = amount * 1.01D;
-				System.out.println(Thread.currentThread().getName() + " Amount: " + amount);
-				try {
-					Thread.sleep(1000 * 1);
-
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-	}
-
+	/***********************************************
+	 * main
+	 ************************************************/
 	public static void main(String[] args) {
 		Account2 acc1 = new Account2(100);
 		Account2 acc2 = new Account2(100);
@@ -100,4 +76,25 @@ public class Account2 {
 		acc2.stop();
 
 	}
+
+    /**
+     * Adds interest to Account.amount until the thread is terminated by another
+     * thread setting the Account.terminate flag to false in another thread
+     */
+    public class Interest implements Runnable {
+        public void run() {
+
+            System.out.println(Thread.currentThread().getName() + " terminate=" + terminate);
+            while (!terminate) {
+                amount = amount * 1.01D;
+                System.out.println(Thread.currentThread().getName() + " Amount: " + amount);
+                try {
+                    Thread.sleep(1000 * 1);
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 }

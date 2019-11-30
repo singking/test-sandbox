@@ -1,4 +1,4 @@
-package concurrency.threading;
+package com.singking.concurrency.threading;
 
 public class Account {
 
@@ -17,19 +17,15 @@ public class Account {
 
 		TestStop stop = new TestStop();
 		new Thread(stop).start();
-
 	}
 
 	public double getAmount() {
 		return amount;
-
 	}
 
 	public void stop() {
 		this.terminate = true;
-
 		thread.interrupt();
-
 	}
 
 	void credit(double amountChange) {
@@ -43,7 +39,13 @@ public class Account {
 	void transfer(Account destination, double amountChange) {
 		debit(amountChange);
 		destination.credit(amountChange);
+	}
 
+	/***********************************************
+	 * main
+	 ************************************************/
+	public static void main(String[] args) {
+		Account acc = new Account(100);
 	}
 
 	public class TestStop implements Runnable {
@@ -73,10 +75,5 @@ public class Account {
 				}
 			}
 		}
-	}
-
-	public static void main(String[] args) {
-		Account acc = new Account(100);
-
 	}
 }

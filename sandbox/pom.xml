@@ -273,7 +273,7 @@
                                     <goal>java</goal>
                                 </goals>
                                 <configuration>
-                                    <mainClass>cxf.simplejaxwsservice.Server</mainClass>
+                                    <mainClass>com.singking.simplejaxwsservice.Server</mainClass>
                                 </configuration>
                             </execution>
                         </executions>
@@ -303,7 +303,7 @@
                                     <goal>java</goal>
                                 </goals>
                                 <configuration>
-                                    <mainClass>cxf.simplejaxwsservice.Client</mainClass>
+                                    <mainClass>com.singking.simplejaxwsservice.Client</mainClass>
                                 </configuration>
                             </execution>
                         </executions>
