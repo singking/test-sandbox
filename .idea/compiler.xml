@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="concurrency" />
         <module name="banking" />
+        <module name="palindrome" />
         <module name="test-sandbox (1)" />
         <module name="Spring-Boot" />
         <module name="lambdas" />

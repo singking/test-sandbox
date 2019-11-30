@@ -5,17 +5,9 @@ package com.singking.palindrome;
  */
 public class Palindrome {
 
-
-    /**
-     * @param palindromeString
-     * @return
-     */
     int scorePalindrome(String palindromeString) {
-
         String nw = normalise(palindromeString);
-
         StringBuilder sb = new StringBuilder(nw);
-
         String reversed = sb.reverse().toString();
 
         if (!checkPalindrome(nw, reversed)) {
@@ -43,11 +35,6 @@ public class Palindrome {
         return sb.toString();
     }
 
-    /**
-     * @param original
-     * @param reversedString
-     * @return
-     */
     boolean checkPalindrome(String original, String reversedString) {
         if (original.length() != reversedString.length()) {
             return false;

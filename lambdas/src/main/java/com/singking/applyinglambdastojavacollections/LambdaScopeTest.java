@@ -27,7 +27,6 @@ public class LambdaScopeTest {
             // must be final or effectively final" in statement A:
             //
             // x = 99;
-
             Consumer<Integer> myConsumer = (y) -> {
                 System.out.println("x = " + x); // Statement A
                 System.out.println("y = " + y);
@@ -36,7 +35,6 @@ public class LambdaScopeTest {
             };
 
             myConsumer.accept(x);
-
         }
     }
 

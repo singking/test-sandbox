@@ -9,7 +9,6 @@ public class ScoreSheet {
     private int score;
     private final Date date;
 
-
     public ScoreSheet() {
         date = new Date();
     }

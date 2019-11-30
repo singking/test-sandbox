@@ -16,12 +16,11 @@ import java.util.List;
  */
 public class PalindromeServlet2 extends HttpServlet {
     private static final long serialVersionUID = 1L;
+
     private Palindrome palindrome = new Palindrome();
+
     private List<ScoreSheet> scoresheet = new ArrayList<ScoreSheet>();
 
-    /**
-     * Default constructor.
-     */
     public PalindromeServlet2() {
         // TODO Auto-generated constructor stub
     }
@@ -34,7 +33,7 @@ public class PalindromeServlet2 extends HttpServlet {
                          HttpServletResponse response) throws ServletException, IOException {
 
         // Use "request" to read incoming HTTP headers
-        String ps = request.getParameter("com/singking/palindrome");
+        String ps = request.getParameter("src/main/java/palindrome");
         String user = request.getParameter("user");
 
         // (e.g., cookies) and query data from HTML forms.
@@ -50,8 +49,6 @@ public class PalindromeServlet2 extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/Palindrome.jsp");
 
         dispatcher.forward(request, response);
-
-
     }
 
     /**
@@ -65,5 +62,4 @@ public class PalindromeServlet2 extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.print("goodbye!");
     }
-
 }

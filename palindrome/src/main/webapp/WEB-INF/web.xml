@@ -13,7 +13,7 @@
     <description>Palindrome receipt desc</description>
     <display-name>PalindromeServlet</display-name>
     <servlet-name>PalindromeServlet</servlet-name>
-    <servlet-class>palindrome.PalindromeServlet</servlet-class>
+    <servlet-class>com.singking.palindrome.PalindromeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PalindromeServlet</servlet-name>
