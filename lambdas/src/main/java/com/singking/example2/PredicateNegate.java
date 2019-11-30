@@ -1,8 +1,4 @@
-package com.singking.streams;
-
-import java.util.Arrays;
-import java.util.function.IntPredicate;
-
+package com.singking.example2;
 
 import java.util.Arrays;
 import java.util.function.IntPredicate;

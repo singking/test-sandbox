@@ -1,4 +1,4 @@
-package com.singking;
+package com.singking.example2;
 
 import java.util.Objects;
 import java.util.function.Function;

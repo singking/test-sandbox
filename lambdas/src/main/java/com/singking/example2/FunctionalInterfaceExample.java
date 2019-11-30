@@ -17,6 +17,6 @@ package com.singking.example2;
  * 
  */
 @FunctionalInterface
-public interface Functional {
+public interface FunctionalInterfaceExample {
 	void method();
 }
